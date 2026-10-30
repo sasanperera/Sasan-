@@ -1,1 +1,25 @@
+What is a Network?
+A network is a the communication between 2 or more devices to share resources.
+
+List all the components and their use in a network 
+
+1.Modem - This is basically the network access the the internet as it is connected to the isp 
+2.Routers - Assigns ips to all the devices that are connected to it and also is used to connect 2 networks together and multiple devices too.
+3.Switchs - Its an intelligent device compared to hub because it is capable of forwarding data to the correct destination using MAC address
+4.Hubs - It distributes data to all the devices connected to it and lacks the capability to send to only one device so it is highly vulnerable.
+
+Cloud computing 
+
+SaaS(Software as a service) - The provider manages the entire software application all you need to do is use 
+PaaS(Platform as a service) - The provider manages the os and the server your job is to use it for development Eg:- google app engine
+IaaS(Infrastructure as a service) - The provider give you the raw virtual hardware and storage to run your own os
+
+
+TCP/IP model(Transmission control protocol)
+
+1.Application Layer - this is basically when you send a request using the web browser of the computer.
+2.Transport Layer - The transport layer is responsible for the assigning of either TCP or UDP and breaks the data in chunks 
+3.Internet Layer - Router already has an assigned ip address to the computer and the computer uses it to packet the chunks with that IP so the wifi knows which device it came from  
+4.Network Access Layer - then the network interface cared in computer radiates these packets to the router using radio waves 
+
 
