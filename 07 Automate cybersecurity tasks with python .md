@@ -266,3 +266,37 @@ print(networks)
 ```
 
 > **Note:** Slicing by a fixed number of characters is a simple demo. It gives `'10.'` for the second IP because that address has only two digits in its first segment. For real work, use `ip.split(".")[0]` to reliably get the first segment.
+
+
+
+# Regular Expressions (Regex) in Python - Quick Notes
+
+## 1. Character Type Symbols (What kind of character?)
+These symbols match a **single** character of a specific type:
+
+| Symbol | What it matches | Example |
+| :--- | :--- | :--- |
+| `\w` | Any letter, number, or underscore (`_`) | In `"ID_A17"`, matches `I, D, _, A, 1, 7` |
+| `\d` | Any single digit (`0` through `9`) | In `"ID_A17"`, matches `1, 7` |
+| `\s` | Any whitespace (spaces, tabs, newlines) | Matches the space in `"user 1"` |
+| `.` | Any character at all (except a newline) | Matches letters, symbols, or spaces |
+| `\.` | A literal dot (`.`) | Uses backslash to look for a real period (e.g., in `.com`) |
+
+---
+
+## 2. Quantifier Symbols (How many times?)
+Quantifiers specify how many repetitions of a character or pattern to look for:
+
+| Symbol | What it means | Example |
+| :--- | :--- | :--- |
+| `+` | One or more times | `\d+` matches `1`, `12`, or `12345` |
+| `*` | Zero, one, or more times | Matches existing characters or empty spaces |
+| `{n}` | Exactly `n` times | `\d{4}` matches a 4-digit code (e.g., `2026`) |
+| `{n,m}` | Between minimum (`n`) and maximum (`m`) times | `\d{1,3}` matches 1, 2, or 3 digits |
+
+---
+
+## 3. Putting it Together: Real-World Log Analysis
+Imagine you have a string of employee login records:
+```text
+"1001 bmoreno: 12 Marketing 1002 tshah: 7 Human Resources"
